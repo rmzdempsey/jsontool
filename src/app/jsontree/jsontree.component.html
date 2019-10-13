@@ -1,5 +1,5 @@
 
-<div class="jsontreecontainer">
+<div class="jsontreecontainer" *ngIf="isVisible()">
   <div *ngFor="let line of visibleLines" >
     <span class="lineNoCol">{{line.lineNo+1}}</span>
     <span class="expandCol">&nbsp;
@@ -12,5 +12,10 @@
     <span class="jsontext">{{line.rawText}}</span>
     <span *ngIf="line.type==='open-array' && !line.expanded">...]</span>
     <span *ngIf="line.type==='open-object' && !line.expanded">...}</span>
+  </div>
+  <div>
+      <span class="lineNoCol lastRow">&nbsp;</span>
+      <span class="expandCol lastRow">&nbsp;</span>
+      <span>&nbsp;</span>
   </div>
 </div>

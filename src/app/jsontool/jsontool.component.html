@@ -1,3 +1,5 @@
-<app-jsoninput (jsonInvalid)="invalidJson()" (formattedJson)="formattedJson($event)"></app-jsoninput>
+<div class="flex-container" >        
+    <app-jsoninput (jsonInvalid)="invalidJson()" (formattedJson)="formattedJson($event)" style="flex-grow: 0;"></app-jsoninput>
+    <app-jsontree style="flex-grow: 1" ></app-jsontree>
+</div>
 
-<app-jsontree fxFlex="grow"></app-jsontree>

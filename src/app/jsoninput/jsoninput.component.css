@@ -1,0 +1,10 @@
+.jsonInputPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.jsonInputButtonPanel{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}

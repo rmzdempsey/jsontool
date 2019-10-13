@@ -1,5 +1,6 @@
 .jsontreecontainer { 
-    border: solid 1px lightgray 
+    border: solid 1px lightgray ;
+    height: 100%;
 }
 .lineNoCol {
     width:50px;

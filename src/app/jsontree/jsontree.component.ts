@@ -19,7 +19,12 @@ export class JsontreeComponent implements OnInit {
   }
 
   loadJson( json ){
-    this.convertToLines(json);
+    if(json){
+      this.convertToLines(json);
+    }
+    else{
+      this.visibleLines = [];
+    }
   }
 
   private convertToLines(json:string) {
@@ -91,6 +96,10 @@ export class JsontreeComponent implements OnInit {
         hiddenIndent=-1;
       }
     }
+  }
+
+  isVisible(): boolean{
+    return this.visibleLines && this.visibleLines.length > 0 ;
   }
 }
 

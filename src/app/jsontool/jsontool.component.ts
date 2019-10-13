@@ -4,7 +4,7 @@ import { JsontreeComponent } from '../jsontree/jsontree.component';
 @Component({
   selector: 'app-jsontool',
   templateUrl: './jsontool.component.html',
-  styleUrls: ['./jsontool.component.sass']
+  styleUrls: ['./jsontool.component.css']
 })
 export class JsontoolComponent implements OnInit, AfterViewInit {
 
@@ -28,6 +28,7 @@ export class JsontoolComponent implements OnInit, AfterViewInit {
   invalidJson(){
     this.validJson = false;
     this.json = null;
+    this.jsontree.loadJson(this.json);
   }
 
   formattedJson( json ){

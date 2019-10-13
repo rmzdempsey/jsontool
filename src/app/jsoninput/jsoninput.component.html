@@ -1,7 +1,12 @@
-<p>
-  <mat-form-field>
-    <textarea matInput placeholder="Input JSON" [ngModel]="rawJson" (ngModelChange)="rawJsonChanged($event)"></textarea>
-  </mat-form-field>
+<p class="jsonInputPanel">
 
-  <button mat-raised-button color="primary" (click)="format()">Format</button>
+  <mat-form-field>
+    <textarea matInput placeholder="Input JSON" [ngModel]="rawJson" (ngModelChange)="rawJsonChanged($event)" rows="10"></textarea>
+  </mat-form-field>
 </p>
+<div class="jsonInputButtonPanel">
+    <button mat-raised-button color="primary" (click)="format()" >Format</button>
+</div>
+<div class="jsonError">
+    {{jsonError}}
+</div>
