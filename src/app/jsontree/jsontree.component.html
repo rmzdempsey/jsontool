@@ -1,0 +1,16 @@
+
+<div class="jsontreecontainer">
+  <div *ngFor="let line of visibleLines" >
+    <span class="lineNoCol">{{line.lineNo+1}}</span>
+    <span class="expandCol">&nbsp;
+      <a *ngIf="line.type==='open-array' || line.type==='open-object'" (click)="expand(line)">
+        <span *ngIf="line.expanded">-</span>
+        <span *ngIf="!line.expanded">+</span>
+      </a>
+    </span>
+    <span class="indent" *ngFor="let i of line.indents">&nbsp;</span>
+    <span class="jsontext">{{line.rawText}}</span>
+    <span *ngIf="line.type==='open-array' && !line.expanded">...]</span>
+    <span *ngIf="line.type==='open-object' && !line.expanded">...}</span>
+  </div>
+</div>

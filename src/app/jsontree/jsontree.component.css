@@ -1,0 +1,19 @@
+.jsontreecontainer { 
+    border: solid 1px lightgray 
+}
+.lineNoCol {
+    width:50px;
+    display: inline-block;
+    background-color: cadetblue;
+    color: lightgrey;
+}
+.expandCol {
+    width:50px;
+    display: inline-block;
+    background-color: cadetblue;
+    color: lightgrey;
+}
+.indent { 
+    width:20px;
+    display: inline-block;
+}
